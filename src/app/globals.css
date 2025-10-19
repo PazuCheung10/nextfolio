@@ -1,26 +1,93 @@
 @import "tailwindcss";
 
+/* Design tokens (kept) */
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --space-xs: 0.25rem;
+  --space-sm: 0.5rem;
+  --space-md: 1rem;
+  --space-lg: 1.5rem;
+  --space-xl: 2rem;
+  --space-2xl: 3rem;
+  --space-3xl: 4rem;
+
+  --radius-sm: 0.25rem;
+  --radius-md: 0.5rem;
+  --radius-lg: 0.75rem;
+  --radius-xl: 1rem;
+  --radius-2xl: 1.5rem;
+  --radius-full: 9999px;
+
+  --shadow-soft: 0 2px 15px -3px rgba(0,0,0,.07), 0 10px 20px -2px rgba(0,0,0,.04);
+  --shadow-medium: 0 4px 25px -5px rgba(0,0,0,.1), 0 10px 10px -5px rgba(0,0,0,.04);
+  --shadow-strong: 0 10px 40px -10px rgba(0,0,0,.2), 0 2px 10px -2px rgba(0,0,0,.1);
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+/* Basic reset (kept light) */
+* { box-sizing: border-box; }
+html, body { height: 100%; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  background-color: #0f172a;
+  color: #f8fafc;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', sans-serif;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+/* Accessibility */
+*:focus-visible { outline: 2px solid #22d3ee; outline-offset: 2px; }
+
+/* Links */
+a {
+  color: #22d3ee;
+  text-decoration: none;
+  transition: color .2s ease;
+}
+a:hover { color: #06b6d4; }
+a:focus-visible { outline: 2px solid #22d3ee; outline-offset: 2px; border-radius: 2px; }
+
+/* Buttons (browser reset only) */
+button { font-family: inherit; }
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: .01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: .01ms !important;
+    scroll-behavior: auto !important;
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+/* Selection */
+::selection { background-color: #22d3ee; color: #0f172a; }
+
+/* Contact section spacing */
+.contact-section {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  width: 100%;
+  max-width: 100%;
 }
+
+@media (min-width: 640px) {
+  .contact-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2.5rem;
+    justify-items: stretch;
+  }
+}
+
+@media (min-width: 768px) {
+  .contact-section {
+    gap: 3rem;
+  }
+}
+
+/* IMPORTANT: do NOT globally override:
+   main, section, .grid, .container, .mx-auto, .text-center, [class*="container"]
+   Tailwind utilities should control spacing/centering. */
