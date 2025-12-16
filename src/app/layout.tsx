@@ -91,9 +91,9 @@ export default function RootLayout({
       </head>
       <body className="bg-slate-950 text-slate-200 antialiased font-sans">
         <SafariFlagger />
-        <div className="min-h-screen flex flex-col">
+        <div className="min-h-screen flex flex-col relative">
           <Header />
-          <main className="flex-1">{children}</main>
+          <main className="flex-1 pt-14 md:pt-0">{children}</main>
           <Footer />
         </div>
       </body>

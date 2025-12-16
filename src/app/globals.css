@@ -90,10 +90,13 @@ button { font-family: inherit; }
 
 /* Safari fix: sticky + backdrop-filter can fail to paint */
 .is-safari header {
+  transform: translateZ(0); /* Force repaint layer */
+}
+
+.is-safari header > div {
   -webkit-backdrop-filter: none !important;
   backdrop-filter: none !important;
   background-color: rgba(2, 6, 23, 0.95) !important; /* slate-950-ish */
-  transform: translateZ(0); /* Force repaint layer */
 }
 
 .is-safari header .md\\:hidden {

@@ -18,81 +18,83 @@ export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
-    <header className="sticky top-0 z-50 w-full border-b border-white/10 bg-slate-950 supports-[backdrop-filter]:bg-slate-950/60 supports-[backdrop-filter]:backdrop-blur">
-      <Container className="h-14 flex items-center justify-between [padding-inline:max(env(safe-area-inset-left),theme(spacing.4))] sm:[padding-inline:max(env(safe-area-inset-left),theme(spacing.6))]">
-        <Link href="/" className="font-semibold text-cyan-300">
-          N<span className="text-cyan-500">extfolio</span>
-        </Link>
-        
-        {/* Desktop Navigation */}
-        <nav className="hidden md:flex items-center gap-6">
-          {links.map((l) => (
-            <Link
-              key={l.href}
-              href={l.href}
-              className={cn(
-                "text-sm text-slate-300 hover:text-white transition-colors",
-                pathname === l.href && "text-white"
-              )}
-            >
-              {l.label}
-            </Link>
-          ))}
-        </nav>
+    <header className="top-0 z-[9999] w-full fixed md:sticky isolate">
+      <div className="w-full border-b border-white/10 bg-slate-950/90 md:bg-slate-950 supports-[backdrop-filter]:md:bg-slate-950/60 supports-[backdrop-filter]:md:backdrop-blur">
+        <Container className="h-14 flex items-center justify-between [padding-inline:max(env(safe-area-inset-left),theme(spacing.4))] sm:[padding-inline:max(env(safe-area-inset-left),theme(spacing.6))]">
+          <Link href="/" className="font-semibold text-cyan-300">
+            N<span className="text-cyan-500">extfolio</span>
+          </Link>
+          
+          {/* Desktop Navigation */}
+          <nav className="hidden md:flex items-center gap-6">
+            {links.map((l) => (
+              <Link
+                key={l.href}
+                href={l.href}
+                className={cn(
+                  "text-sm text-slate-300 hover:text-white transition-colors",
+                  pathname === l.href && "text-white"
+                )}
+              >
+                {l.label}
+              </Link>
+            ))}
+          </nav>
 
-        {/* Mobile Menu Button */}
-        <button
-          onClick={() => setIsMenuOpen(!isMenuOpen)}
-          className="md:hidden p-2 text-slate-300 hover:text-white transition-colors"
-          aria-label="Toggle menu"
-        >
-          <svg
-            className="w-6 h-6"
-            fill="none"
-            stroke="currentColor"
-            viewBox="0 0 24 24"
+          {/* Mobile Menu Button */}
+          <button
+            onClick={() => setIsMenuOpen(!isMenuOpen)}
+            className="md:hidden p-2 text-slate-300 hover:text-white transition-colors"
+            aria-label="Toggle menu"
           >
-            {isMenuOpen ? (
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth={2}
-                d="M6 18L18 6M6 6l12 12"
-              />
-            ) : (
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth={2}
-                d="M4 6h16M4 12h16M4 18h16"
-              />
-            )}
-          </svg>
-        </button>
-      </Container>
+            <svg
+              className="w-6 h-6"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              {isMenuOpen ? (
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M6 18L18 6M6 6l12 12"
+                />
+              ) : (
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M4 6h16M4 12h16M4 18h16"
+                />
+              )}
+            </svg>
+          </button>
+        </Container>
 
-      {/* Mobile Menu */}
-      {isMenuOpen && (
-        <div className="md:hidden border-t border-white/10 bg-slate-950/95 supports-[backdrop-filter]:backdrop-blur">
-          <Container className="py-4">
-            <nav className="flex flex-col space-y-4">
-              {links.map((l) => (
-                <Link
-                  key={l.href}
-                  href={l.href}
-                  onClick={() => setIsMenuOpen(false)}
-                  className={cn(
-                    "text-sm text-slate-300 hover:text-white transition-colors py-2",
-                    pathname === l.href && "text-white"
-                  )}
-                >
-                  {l.label}
-                </Link>
-              ))}
-            </nav>
-          </Container>
-        </div>
-      )}
+        {/* Mobile Menu */}
+        {isMenuOpen && (
+          <div className="md:hidden border-t border-white/10 bg-slate-950/95">
+            <Container className="py-4">
+              <nav className="flex flex-col space-y-4">
+                {links.map((l) => (
+                  <Link
+                    key={l.href}
+                    href={l.href}
+                    onClick={() => setIsMenuOpen(false)}
+                    className={cn(
+                      "text-sm text-slate-300 hover:text-white transition-colors py-2",
+                      pathname === l.href && "text-white"
+                    )}
+                  >
+                    {l.label}
+                  </Link>
+                ))}
+              </nav>
+            </Container>
+          </div>
+        )}
+      </div>
     </header>
   );
 }
