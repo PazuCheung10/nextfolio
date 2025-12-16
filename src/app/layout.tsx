@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Header from '@/components/nav/Header'
 import Footer from '@/components/nav/Footer'
+import SafariFlagger from '@/components/SafariFlagger'
 import "./globals.css";
 
 export const metadata: Metadata = {
@@ -45,6 +46,19 @@ export const metadata: Metadata = {
       'max-snippet': -1,
     },
   },
+  appleWebApp: {
+    capable: true,
+    statusBarStyle: 'default',
+    title: 'Nextfolio - Frontend Developer',
+  },
+};
+
+export const viewport = {
+  width: 'device-width',
+  initialScale: 1,
+  maximumScale: 1,
+  userScalable: false,
+  themeColor: '#0f172a',
 };
 
 export default function RootLayout({
@@ -53,8 +67,30 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="scroll-smooth">
+    <html lang="en" className="scroll-smooth" suppressHydrationWarning>
+      <head>
+        {/* Detect Safari immediately (before React hydration) */}
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              (function() {
+                try {
+                  // Detect Safari immediately (before React hydration)
+                  var ua = navigator.userAgent;
+                  var isAppleWebKit = /AppleWebKit/.test(ua);
+                  var isChromeOrCriOS = /Chrome|CriOS|Edg/.test(ua);
+                  var isSafari = isAppleWebKit && !isChromeOrCriOS;
+                  if (isSafari) {
+                    document.documentElement.classList.add('is-safari');
+                  }
+                } catch (e) {}
+              })();
+            `,
+          }}
+        />
+      </head>
       <body className="bg-slate-950 text-slate-200 antialiased font-sans">
+        <SafariFlagger />
         <div className="min-h-screen flex flex-col">
           <Header />
           <main className="flex-1">{children}</main>
