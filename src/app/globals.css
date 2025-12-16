@@ -88,6 +88,19 @@ button { font-family: inherit; }
   }
 }
 
+/* Safari fix: sticky + backdrop-filter can fail to paint */
+.is-safari header {
+  -webkit-backdrop-filter: none !important;
+  backdrop-filter: none !important;
+  background-color: rgba(2, 6, 23, 0.95) !important; /* slate-950-ish */
+  transform: translateZ(0); /* Force repaint layer */
+}
+
+.is-safari header .md\\:hidden {
+  -webkit-backdrop-filter: none !important;
+  backdrop-filter: none !important;
+}
+
 /* IMPORTANT: do NOT globally override:
    main, section, .grid, .container, .mx-auto, .text-center, [class*="container"]
    Tailwind utilities should control spacing/centering. */

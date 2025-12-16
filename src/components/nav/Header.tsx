@@ -18,7 +18,7 @@ export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
-    <header className="sticky top-0 z-50 w-full border-b border-white/10 bg-slate-950/60 backdrop-blur">
+    <header className="sticky top-0 z-50 w-full border-b border-white/10 bg-slate-950 supports-[backdrop-filter]:bg-slate-950/60 supports-[backdrop-filter]:backdrop-blur">
       <Container className="h-14 flex items-center justify-between [padding-inline:max(env(safe-area-inset-left),theme(spacing.4))] sm:[padding-inline:max(env(safe-area-inset-left),theme(spacing.6))]">
         <Link href="/" className="font-semibold text-cyan-300">
           N<span className="text-cyan-500">extfolio</span>
@@ -73,7 +73,7 @@ export default function Header() {
 
       {/* Mobile Menu */}
       {isMenuOpen && (
-        <div className="md:hidden border-t border-white/10 bg-slate-950/95 backdrop-blur">
+        <div className="md:hidden border-t border-white/10 bg-slate-950/95 supports-[backdrop-filter]:backdrop-blur">
           <Container className="py-4">
             <nav className="flex flex-col space-y-4">
               {links.map((l) => (
