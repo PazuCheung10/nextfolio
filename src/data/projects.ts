@@ -25,12 +25,12 @@ export const projects: Project[] = [
     id: '6',
     title: 'Accessly',
     slug: 'accessly',
-    summary: 'Enterprise auth platform with RBAC, realtime chat, and SSR dashboards.',
+    summary: 'Enterprise internal workspace with RBAC, realtime chat, and SSR dashboards.',
     description: 'A full-stack enterprise application featuring NextAuth authentication, role-based access control (RBAC), real-time chat with Socket.io, and server-side rendered dashboards. Demonstrates production-ready patterns for authentication, authorization, and real-time collaboration.',
     tags: ['Next.js', 'NextAuth', 'Prisma', 'Socket.io', 'TypeScript', 'PostgreSQL'],
     links: {
       demo: 'https://accessly.vercel.app',
-      github: 'https://github.com/yourusername/accessly',
+      github: 'https://github.com/PazuCheung10/accessly',
     },
     featured: true,
     status: 'completed',
@@ -44,7 +44,7 @@ export const projects: Project[] = [
     tags: ['React', 'TypeScript', 'Zustand', 'React DnD'],
     links: {
       demo: 'https://taskzen.vercel.app',
-      github: 'https://github.com/yourusername/taskzen',
+      github: 'https://github.com/PazuCheung10/taskzen',
     },
     featured: true,
     status: 'completed',
@@ -58,7 +58,7 @@ export const projects: Project[] = [
     tags: ['Next.js', 'Stripe', 'Prisma', 'Zod', 'React Hook Form'],
     links: {
       demo: 'https://shopverse.vercel.app',
-      github: 'https://github.com/yourusername/shopverse',
+      github: 'https://github.com/PazuCheung10/shopverse',
     },
     featured: true,
     status: 'completed',
@@ -72,7 +72,7 @@ export const projects: Project[] = [
     tags: ['React', 'TypeScript', 'OpenWeather API', 'Leaflet'],
     links: {
       demo: 'https://weatherflow.vercel.app',
-      github: 'https://github.com/yourusername/weatherflow',
+      github: 'https://github.com/PazuCheung10/weatherflow',
     },
     featured: false,
     status: 'completed',
@@ -86,7 +86,7 @@ export const projects: Project[] = [
     tags: ['Next.js', 'TypeScript', 'TanStack Query', 'Recharts'],
     links: {
       demo: 'https://insightboard.vercel.app',
-      github: 'https://github.com/yourusername/insightboard',
+      github: 'https://github.com/PazuCheung10/insightboard',
     },
     featured: false,
     status: 'archived',
@@ -101,7 +101,7 @@ export const projects: Project[] = [
     tags: ['Next.js', 'TypeScript', 'Tailwind', 'Framer Motion', 'Vercel'],
     links: {
       demo: 'https://nextfolio.dev',
-      github: 'https://github.com/yourusername/nextfolio',
+      github: 'https://github.com/PazuCheung10/nextfolio',
     },
     featured: false,
     status: 'completed',
@@ -115,7 +115,7 @@ export const projects: Project[] = [
     tags: ['React', 'Canvas API', 'Three.js', 'Framer Motion'],
     links: {
       demo: 'https://motioncanvas.vercel.app',
-      github: 'https://github.com/yourusername/motioncanvas',
+      github: 'https://github.com/PazuCheung10/motioncanvas',
     },
     featured: false,
     status: 'completed',

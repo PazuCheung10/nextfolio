@@ -55,10 +55,10 @@ function Hero() {
           <div className="text-center max-w-5xl mx-auto">
             <h1 className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold mb-8 leading-tight">
               I build{' '}
-              <span className="text-cyan-400 bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent">enterprise</span> web applications
+              <span className="text-cyan-400 bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent">internal enterprise</span> web applications
               with{' '}
-              <span className="text-cyan-400 bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent">auth</span>,{' '}
-              <span className="text-cyan-400 bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent">RBAC</span>, and realtime features.
+              <span className="text-cyan-400 bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent">authentication</span>,{' '}
+              <span className="text-cyan-400 bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent">RBAC</span>, and real-time collaboration.
             </h1>
 
             <p className="text-lg md:text-xl lg:text-2xl text-slate-300 mb-16 max-w-4xl mx-auto leading-relaxed">
@@ -120,10 +120,10 @@ function Hero() {
             style={{ willChange: 'transform, opacity' }}
           >
             I build{' '}
-            <span className="text-cyan-400 bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent">enterprise</span> web applications
+            <span className="text-cyan-400 bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent">internal enterprise</span> web applications
             with{' '}
-            <span className="text-cyan-400 bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent">auth</span>,{' '}
-            <span className="text-cyan-400 bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent">RBAC</span>, and realtime features.
+            <span className="text-cyan-400 bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent">authentication</span>,{' '}
+            <span className="text-cyan-400 bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent">RBAC</span>, and real-time collaboration.
           </motion.h1>
 
           <motion.p

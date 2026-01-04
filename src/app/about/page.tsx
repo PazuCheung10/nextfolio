@@ -41,11 +41,9 @@ export default function AboutPage() {
             About <span className="text-cyan-400 bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent">Me</span>
           </h1>
           <p className="mx-auto max-w-3xl text-center text-lg text-slate-300 leading-relaxed">
-            I&apos;m a passionate frontend developer with a love for creating
-            beautiful, functional web experiences that users love to interact with.
-            With expertise in React, Next.js, and modern web technologies, I build
-            applications that are not only visually appealing but also performant,
-            accessible, and maintainable.
+            I&apos;m a frontend-leaning full-stack developer focused on building reliable
+            internal tools and enterprise web applications. I work primarily with React and
+            Next.js, with a strong emphasis on authentication, authorization, and real-time features.
           </p>
         </div>
 
@@ -66,32 +64,32 @@ export default function AboutPage() {
               <div>
                 <h3 className="font-medium mb-2">Email</h3>
                 <a
-                  href="mailto:your.email@example.com"
+                  href="mailto:hi@Pazu.dev"
                   className="text-cyan-400 hover:text-cyan-300 transition-colors"
                 >
-                  your.email@example.com
+                  hi@Pazu.dev
                 </a>
               </div>
               <div>
                 <h3 className="font-medium mb-2">LinkedIn</h3>
                 <a
-                  href="https://linkedin.com/in/yourprofile"
+                  href="https://www.linkedin.com/in/PazuC/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-cyan-400 hover:text-cyan-300 transition-colors"
                 >
-                  linkedin.com/in/yourprofile
+                  linkedin.com/in/PazuC
                 </a>
               </div>
               <div>
                 <h3 className="font-medium mb-2">GitHub</h3>
                 <a
-                  href="https://github.com/yourusername"
+                  href="https://github.com/PazuCheung10"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-cyan-400 hover:text-cyan-300 transition-colors"
                 >
-                  github.com/yourusername
+                  github.com/PazuCheung10
                 </a>
               </div>
             </div>
