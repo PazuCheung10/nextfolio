@@ -11,8 +11,8 @@ export const metadata: Metadata = {
   },
   description: 'I craft responsive, interactive web experiences with React & Next.js. Specializing in modern frontend development and user experience design.',
   keywords: ['frontend developer', 'react', 'nextjs', 'typescript', 'tailwind', 'web development'],
-  authors: [{ name: 'Fung' }],
-  creator: 'Fung',
+  authors: [{ name: 'Pazu' }],
+  creator: 'Pazu',
   openGraph: {
     type: 'website',
     locale: 'en_US',

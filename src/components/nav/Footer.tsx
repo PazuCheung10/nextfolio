@@ -63,7 +63,7 @@ export default function Footer() {
         <div className="mt-6 pt-6 border-t border-white/10">
           <div className="flex flex-col md:flex-row justify-between items-center space-y-2 md:space-y-0">
             <p className="text-sm text-slate-500">
-              © {new Date().getFullYear()} Fung. All rights reserved.
+              © {new Date().getFullYear()} Pazu. All rights reserved.
             </p>
             <p className="text-sm text-slate-500">
               Built with Next.js & Tailwind, deployed on Vercel.

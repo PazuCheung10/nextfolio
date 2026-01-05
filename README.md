@@ -232,7 +232,7 @@ const nextConfig = {
 
 ## Author / License
 
-© 2025 Fung – Freelance Front-End Developer
+© 2025 Pazu – Freelance Front-End Developer
 
 Built for educational & professional showcase purposes.
 
