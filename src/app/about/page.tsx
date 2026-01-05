@@ -3,35 +3,9 @@
 import { motion } from 'framer-motion'
 import Container from '@/components/ui/Container'
 import Section from '@/components/ui/Section'
-import Button from '@/components/ui/Button'
-import { useForm } from 'react-hook-form'
-import { zodResolver } from '@hookform/resolvers/zod'
-import { z } from 'zod'
-
-const contactSchema = z.object({
-  name: z.string().min(2, 'Name must be at least 2 characters'),
-  email: z.string().email('Please enter a valid email address'),
-  message: z.string().min(10, 'Message must be at least 10 characters'),
-})
-
-type ContactForm = z.infer<typeof contactSchema>
+import { useState } from 'react'
 
 export default function AboutPage() {
-  const {
-    register,
-    handleSubmit,
-    formState: { errors, isSubmitting },
-    reset,
-  } = useForm<ContactForm>({
-    resolver: zodResolver(contactSchema),
-  })
-
-  const onSubmit = (data: ContactForm) => {
-    console.log('Form submission:', data)
-    // TODO: Implement actual form submission
-    reset()
-  }
-
   return (
     <Section id="contact" className="pt-16 md:pt-20 pb-24 md:pb-32">
       <Container>
@@ -47,134 +21,103 @@ export default function AboutPage() {
           </p>
         </div>
 
-        <div className="contact-section">
-          {/* Contact Info */}
-          <motion.div 
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: "-100px" }}
-            transition={{ duration: 0.5, delay: 0.1 }}
-            whileHover={{ y: -5 }}
-            className="rounded-2xl bg-white/5 backdrop-blur p-8 md:p-10 hover:shadow-lg hover:shadow-black/30 hover:bg-white/10 group"
-          >
-            <h2 className="text-2xl font-semibold mb-6 text-cyan-400 group-hover:text-cyan-300 transition-colors">
-              Let&apos;s Connect
-            </h2>
-            <div className="space-y-4">
-              <div>
-                <h3 className="font-medium mb-2">Email</h3>
+        {/* Contact Section */}
+        <motion.div 
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-100px" }}
+          transition={{ duration: 0.5, delay: 0.1 }}
+          whileHover={{ y: -5 }}
+          className="max-w-2xl mx-auto rounded-2xl bg-white/5 backdrop-blur p-8 md:p-10 hover:shadow-lg hover:shadow-black/30 hover:bg-white/10 group"
+        >
+          <h2 className="text-2xl font-semibold mb-4 text-cyan-400 group-hover:text-cyan-300 transition-colors">
+            Get in Touch
+          </h2>
+          <p className="text-slate-300 mb-8 leading-relaxed">
+            Feel free to reach out — I usually reply within 24 hours.
+          </p>
+          <div className="space-y-6">
+            <div>
+              <h3 className="font-medium mb-3 text-slate-200">Email</h3>
+              <div className="flex items-center gap-3 flex-wrap">
                 <a
-                  href="mailto:hi@Pazu.dev"
-                  className="text-cyan-400 hover:text-cyan-300 transition-colors"
+                  href="mailto:hi@pazu.dev"
+                  className="text-cyan-400 hover:text-cyan-300 transition-colors text-lg"
                 >
-                  hi@Pazu.dev
+                  hi@pazu.dev
                 </a>
-              </div>
-              <div>
-                <h3 className="font-medium mb-2">LinkedIn</h3>
-                <a
-                  href="https://www.linkedin.com/in/PazuC/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-cyan-400 hover:text-cyan-300 transition-colors"
-                >
-                  linkedin.com/in/PazuC
-                </a>
-              </div>
-              <div>
-                <h3 className="font-medium mb-2">GitHub</h3>
-                <a
-                  href="https://github.com/PazuCheung10"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-cyan-400 hover:text-cyan-300 transition-colors"
-                >
-                  github.com/PazuCheung10
-                </a>
+                <CopyEmailButton email="hi@pazu.dev" />
               </div>
             </div>
-          </motion.div>
-
-          {/* Contact Form */}
-          <motion.div 
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: "-100px" }}
-            transition={{ duration: 0.5, delay: 0.2 }}
-            whileHover={{ y: -5 }}
-            className="rounded-2xl bg-white/5 backdrop-blur p-8 md:p-10 hover:shadow-lg hover:shadow-black/30 hover:bg-white/10 group"
-          >
-            <h2 className="text-2xl font-semibold mb-6 text-cyan-400 group-hover:text-cyan-300 transition-colors">
-              Send a Message
-            </h2>
-            <form onSubmit={handleSubmit(onSubmit)} className="contact-form space-y-6">
-              <div>
-                <label
-                  htmlFor="name"
-                  className="block text-sm font-medium mb-3 text-slate-300"
-                >
-                  Name
-                </label>
-                <input
-                  type="text"
-                  id="name"
-                  {...register('name')}
-                  className="w-full p-3 rounded-lg bg-slate-700/50 border border-slate-600/50 focus:ring-2 focus:ring-cyan-500/50 focus:border-cyan-500 text-white placeholder-slate-400 transition-all duration-200 hover:border-slate-500/50"
-                  placeholder="Your Name"
-                />
-                {errors.name && (
-                  <p className="mt-1 text-sm text-red-400">{errors.name.message}</p>
-                )}
-              </div>
-              <div>
-                <label
-                  htmlFor="email"
-                  className="block text-sm font-medium mb-3 text-slate-300"
-                >
-                  Email
-                </label>
-                <input
-                  type="email"
-                  id="email"
-                  {...register('email')}
-                  className="w-full p-3 rounded-lg bg-slate-700/50 border border-slate-600/50 focus:ring-2 focus:ring-cyan-500/50 focus:border-cyan-500 text-white placeholder-slate-400 transition-all duration-200 hover:border-slate-500/50"
-                  placeholder="your.email@example.com"
-                />
-                {errors.email && (
-                  <p className="mt-1 text-sm text-red-400">{errors.email.message}</p>
-                )}
-              </div>
-              <div>
-                <label
-                  htmlFor="message"
-                  className="block text-sm font-medium mb-3 text-slate-300"
-                >
-                  Message
-                </label>
-                <textarea
-                  id="message"
-                  rows={5}
-                  {...register('message')}
-                  className="w-full p-3 rounded-lg bg-slate-700/50 border border-slate-600/50 focus:ring-2 focus:ring-cyan-500/50 focus:border-cyan-500 text-white placeholder-slate-400 transition-all duration-200 hover:border-slate-500/50 resize-none"
-                  placeholder="Your message..."
-                ></textarea>
-                {errors.message && (
-                  <p className="mt-1 text-sm text-red-400">{errors.message.message}</p>
-                )}
-              </div>
-              <div className="pt-2">
-                <Button
-                  type="submit"
-                  disabled={isSubmitting}
-                  className="w-full"
-                >
-                  {isSubmitting ? 'Sending...' : 'Send Message'}
-                </Button>
-              </div>
-            </form>
-          </motion.div>
-        </div>
+            <div>
+              <h3 className="font-medium mb-3 text-slate-200">LinkedIn</h3>
+              <a
+                href="https://www.linkedin.com/in/PazuC/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-cyan-400 hover:text-cyan-300 transition-colors inline-flex items-center gap-2"
+              >
+                <span>linkedin.com/in/PazuC</span>
+                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                </svg>
+              </a>
+            </div>
+            <div>
+              <h3 className="font-medium mb-3 text-slate-200">GitHub</h3>
+              <a
+                href="https://github.com/PazuCheung10"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-cyan-400 hover:text-cyan-300 transition-colors inline-flex items-center gap-2"
+              >
+                <span>github.com/PazuCheung10</span>
+                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                </svg>
+              </a>
+            </div>
+          </div>
+        </motion.div>
       </Container>
     </Section>
+  )
+}
+
+function CopyEmailButton({ email }: { email: string }) {
+  const [copied, setCopied] = useState(false)
+
+  const handleCopy = async () => {
+    try {
+      await navigator.clipboard.writeText(email)
+      setCopied(true)
+      setTimeout(() => setCopied(false), 2000)
+    } catch (err) {
+      console.error('Failed to copy email:', err)
+    }
+  }
+
+  return (
+    <button
+      onClick={handleCopy}
+      className="px-3 py-1.5 text-xs font-medium rounded-lg bg-slate-700/50 hover:bg-slate-600/50 text-slate-300 hover:text-white transition-colors border border-slate-600/50 hover:border-cyan-500/50"
+      aria-label="Copy email address"
+    >
+      {copied ? (
+        <span className="flex items-center gap-1.5">
+          <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+          </svg>
+          Copied!
+        </span>
+      ) : (
+        <span className="flex items-center gap-1.5">
+          <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z" />
+          </svg>
+          Copy
+        </span>
+      )}
+    </button>
   )
 }
