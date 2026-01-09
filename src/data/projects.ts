@@ -102,7 +102,7 @@ export const projects: Project[] = [
       'Orbit Lab is an interactive gravity simulation playground: click/drag to create stars, switch physics modes, tweak parameters live, and save/load universes. Built as a real-time Canvas UI to make simulation rules visible and explorable.',
     tags: ['Next.js', 'TypeScript', 'Canvas API', 'Physics'],
     links: {
-      demo: 'https://motioncanvas.vercel.app',
+      demo: 'https://orbitlab-seven.vercel.app/',
       github: 'https://github.com/PazuCheung10/orbitlab',
     },
     featured: false,
