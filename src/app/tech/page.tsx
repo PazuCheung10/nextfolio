@@ -12,7 +12,7 @@ const skillCategories = [
   {
     title: 'Auth & Permissions',
     skills: [
-      { name: 'NextAuth', description: 'Authentication framework' },
+      { name: 'NextAuth (Auth.js v5)', description: 'Authentication framework' },
       { name: 'Session Management', description: 'User session handling' },
       { name: 'Role-based Access', description: 'Permission systems' },
       { name: 'JWT Tokens', description: 'Secure token handling' },
@@ -22,17 +22,19 @@ const skillCategories = [
     title: 'Realtime & Integration',
     skills: [
       { name: 'Socket.io', description: 'Real-time communication' },
-      { name: 'Supabase Realtime', description: 'Database subscriptions' },
       { name: 'Stripe', description: 'Payment processing' },
       { name: 'REST APIs', description: 'API integration patterns' },
+      { name: 'Open-Meteo', description: 'Weather data API' },
     ],
   },
   {
     title: 'Deployment & DevOps',
     skills: [
       { name: 'Vercel', description: 'Frontend deployment' },
+      { name: 'Railway', description: 'Full-stack deployment platform' },
       { name: 'GitHub Actions', description: 'CI/CD pipelines' },
       { name: 'Docker', description: 'Containerization' },
+      { name: 'Vitest', description: 'Testing framework' },
       { name: 'Environment Management', description: 'Config & secrets' },
     ],
   },
@@ -40,19 +42,19 @@ const skillCategories = [
     title: 'Frontend Core',
     skills: [
       { name: 'React', description: 'Component-based UI library' },
-      { name: 'Next.js 14', description: 'App Router & full-stack framework' },
+      { name: 'Next.js', description: 'App Router & full-stack framework' },
       { name: 'TypeScript', description: 'Type-safe JavaScript' },
       { name: 'Tailwind CSS', description: 'Utility-first CSS framework' },
       { name: 'Framer Motion', description: 'Animation & interaction library' },
+      { name: 'PWA', description: 'Progressive Web App capabilities' },
     ],
   },
   {
     title: 'Database & Backend',
     skills: [
       { name: 'Prisma', description: 'Database ORM' },
-      { name: 'SQLite', description: 'Local database' },
+      { name: 'PostgreSQL', description: 'Relational database' },
       { name: 'Neon', description: 'Serverless PostgreSQL' },
-      { name: 'MongoDB', description: 'NoSQL database' },
     ],
   },
   {
@@ -63,6 +65,7 @@ const skillCategories = [
       { name: 'localStorage', description: 'Browser persistence' },
       { name: 'Zod', description: 'Schema validation' },
       { name: 'React Hook Form', description: 'Form handling' },
+      { name: '@dnd-kit', description: 'Drag and drop library' },
     ],
   },
   {
@@ -71,7 +74,6 @@ const skillCategories = [
       { name: 'Recharts', description: 'React chart library' },
       { name: 'Chart.js', description: 'Canvas-based charts' },
       { name: 'Canvas API', description: 'Custom graphics rendering' },
-      { name: 'Three.js', description: '3D graphics library' },
     ],
   },
   {
@@ -79,7 +81,6 @@ const skillCategories = [
     skills: [
       { name: 'Leaflet', description: 'Interactive maps' },
       { name: 'Geolocation API', description: 'Location services' },
-      { name: 'OpenWeatherMap', description: 'Weather data integration' },
     ],
   },
 ]

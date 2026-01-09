@@ -20,7 +20,7 @@ export const projects: Project[] = [
     slug: 'accessly',
     summary: 'Enterprise internal workspace with RBAC, realtime chat, and SSR dashboards.',
     description: 'A full-stack enterprise application featuring NextAuth authentication, role-based access control (RBAC), real-time chat with Socket.io, and server-side rendered dashboards. Demonstrates production-ready patterns for authentication, authorization, and real-time collaboration.',
-    tags: ['Next.js', 'NextAuth', 'Prisma', 'Socket.io', 'TypeScript', 'PostgreSQL'],
+    tags: ['Next.js', 'NextAuth', 'Prisma', 'Socket.io', 'TypeScript', 'PostgreSQL', 'Zustand', 'Tailwind CSS'],
     links: {
       demo: 'https://accessly-pvsc.onrender.com',
       github: 'https://github.com/PazuCheung10/accessly',
@@ -33,7 +33,7 @@ export const projects: Project[] = [
     slug: 'taskzen',
     summary: 'Smooth Kanban with drag-and-drop and global store.',
     description: 'A lightweight yet powerful Kanban board application with intuitive drag-and-drop functionality, persistent storage, and smooth micro-animations. Perfect for personal and team task management.',
-    tags: ['React', 'TypeScript', 'Zustand', '@dnd-kit'],
+    tags: ['Next.js', 'TypeScript', 'Zustand', '@dnd-kit', 'Tailwind CSS'],
     links: {
       demo: 'https://taskzen-bice.vercel.app',
       github: 'https://github.com/PazuCheung10/taskzen',
@@ -47,7 +47,7 @@ export const projects: Project[] = [
     summary: 'Full e-commerce flow from product list to Stripe checkout.',
     description:
       'A minimal e-commerce demo focused on production-grade checkout concerns: server-trusted pricing, strict validation, and webhook-driven persistence (Stripe Checkout → DB order receipt). Covers catalog → cart → checkout → receipt.',
-    tags: ['Next.js', 'Stripe', 'Prisma', 'Zod', 'React Hook Form'],
+    tags: ['Next.js', 'Stripe', 'Prisma', 'PostgreSQL', 'Zod', 'React Hook Form', 'Tailwind CSS'],
     links: {
       demo: 'https://shopverse-snowy-five.vercel.app',
       github: 'https://github.com/PazuCheung10/shopverse',
@@ -60,7 +60,7 @@ export const projects: Project[] = [
     slug: 'weatherflow',
     summary: 'Map-based weather search with dynamic visuals.',
     description: 'An immersive weather application combining location-based forecasts with interactive maps. Features city search, geolocation, animated weather icons, and beautiful visual transitions.',
-    tags: ['React', 'TypeScript', 'Open‑Meteo', 'Leaflet'],
+    tags: ['Next.js', 'TypeScript', 'TanStack Query', 'Open‑Meteo', 'Leaflet', 'Chart.js', 'Framer Motion', 'React Hook Form', 'Tailwind CSS'],
     links: {
       demo: 'https://weatherflow-teal.vercel.app',
       github: 'https://github.com/PazuCheung10/weatherflow',
@@ -73,7 +73,7 @@ export const projects: Project[] = [
     slug: 'insightboard',
     summary: 'Crypto dashboard with charts and watchlist (demo with sample data).',
     description: 'A cryptocurrency tracking dashboard featuring interactive charts, custom watchlists, and advanced filtering. Currently using sample data for demonstration purposes. Built with data visualization and caching logic for optimal performance.',
-    tags: ['Next.js', 'TypeScript', 'TanStack Query', 'Recharts'],
+    tags: ['Next.js', 'TypeScript', 'TanStack Query', 'Recharts', 'Zod', 'Tailwind CSS'],
     links: {
       demo: 'https://insightboard-three.vercel.app',
       github: 'https://github.com/PazuCheung10/insightboard',
