@@ -26,16 +26,6 @@ function ProjectCard({ project, index = 0, className }: ProjectCardProps) {
       <div className="p-5 md:p-6 flex flex-col flex-1">
         <div className="flex items-center gap-2 mb-1">
           <h3 className="text-lg font-semibold text-white">{project.title}</h3>
-          {project.status === 'in-progress' && project.statusLabel && (
-            <span className="inline-flex items-center rounded-full bg-cyan-500/20 text-cyan-300 px-2.5 py-0.5 text-xs font-medium ring-1 ring-cyan-500/30">
-              {project.statusLabel}
-            </span>
-          )}
-          {project.status === 'archived' && project.statusLabel && (
-            <span className="inline-flex items-center rounded-full bg-slate-600/30 text-slate-400 px-2.5 py-0.5 text-xs font-medium ring-1 ring-slate-600/50">
-              {project.statusLabel}
-            </span>
-          )}
         </div>
         <p className="mt-2 text-sm text-slate-300 leading-relaxed">{project.summary}</p>
         <div className="mt-4 flex flex-wrap gap-2">

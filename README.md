@@ -1,6 +1,12 @@
 # Nextfolio – Personal Portfolio
 
-A modern, production-ready personal portfolio showcasing front-end development skills, freelance readiness, and design clarity. Built with Next.js 14 App Router, TypeScript, and TailwindCSS to demonstrate clean architecture, modular code patterns, and aesthetic UI design principles.
+A modern, production-ready personal portfolio showcasing front-end development skills, freelance readiness, and design clarity. Built with Next.js (App Router), TypeScript, and TailwindCSS to demonstrate clean architecture, modular code patterns, and aesthetic UI design principles.
+
+---
+
+## Purpose
+
+This portfolio is designed as both a personal website and a living codebase that demonstrates how I structure, scale, and maintain modern front-end applications. The focus is clarity, consistency, and production-ready patterns rather than experimental features.
 
 ---
 
@@ -8,7 +14,7 @@ A modern, production-ready personal portfolio showcasing front-end development s
 
 | Layer | Tech |
 |-------|------|
-| **Framework** | Next.js 14 (App Router) |
+| **Framework** | Next.js (App Router) |
 | **Language** | TypeScript |
 | **Styling** | TailwindCSS + class-variance-authority + clsx |
 | **Motion** | Framer Motion |
@@ -237,3 +243,7 @@ const nextConfig = {
 Built for educational & professional showcase purposes.
 
 Licensed under the MIT License.
+
+---
+Built by Pazu
+https://pazu.dev
