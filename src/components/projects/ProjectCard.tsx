@@ -17,6 +17,9 @@ function ProjectCard({ project, index = 0, className }: ProjectCardProps) {
   const handleCardClick = () => {
     if (project.slug === 'accessly') {
       router.push('/projects/accessly')
+    } else {
+      // Open demo link in new tab for other projects
+      window.open(project.links.demo, '_blank', 'noopener,noreferrer')
     }
   }
 
@@ -26,10 +29,9 @@ function ProjectCard({ project, index = 0, className }: ProjectCardProps) {
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5, delay: index * 0.1 }}
       whileHover={{ y: -5 }}
-      onClick={project.slug === 'accessly' ? handleCardClick : undefined}
+      onClick={handleCardClick}
       className={cn(
-        "flex h-full flex-col rounded-2xl bg-white/5 shadow-sm ring-1 ring-white/10 hover:shadow-md hover:shadow-black/20 hover:ring-white/20 transition-shadow overflow-hidden",
-        project.slug === 'accessly' && "cursor-pointer",
+        "flex h-full flex-col rounded-2xl bg-white/5 shadow-sm ring-1 ring-white/10 hover:shadow-md hover:shadow-black/20 hover:ring-white/20 transition-shadow overflow-hidden cursor-pointer",
         className
       )}
     >
