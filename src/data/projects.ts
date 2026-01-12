@@ -25,6 +25,7 @@ export const projects: Project[] = [
       demo: 'https://accessly-pvsc.onrender.com',
       github: 'https://github.com/PazuCheung10/accessly',
     },
+    image: '/projects/accessly.png',
     featured: true,
   },
   {
@@ -38,6 +39,7 @@ export const projects: Project[] = [
       demo: 'https://taskzen-bice.vercel.app',
       github: 'https://github.com/PazuCheung10/taskzen',
     },
+    image: '/projects/taskzen.png',
     featured: true,
   },
   {
@@ -52,6 +54,7 @@ export const projects: Project[] = [
       demo: 'https://shopverse-snowy-five.vercel.app',
       github: 'https://github.com/PazuCheung10/shopverse',
     },
+    image: '/projects/shopverse.png',
     featured: true,
   },
   {
@@ -65,6 +68,7 @@ export const projects: Project[] = [
       demo: 'https://weatherflow-teal.vercel.app',
       github: 'https://github.com/PazuCheung10/weatherflow',
     },
+    image: '/projects/weatherflow.png',
     featured: false,
   },
   {
@@ -78,6 +82,7 @@ export const projects: Project[] = [
       demo: 'https://insightboard-three.vercel.app',
       github: 'https://github.com/PazuCheung10/insightboard',
     },
+    image: '/projects/Insightboard.png',
     featured: false,
   },
   {
@@ -91,6 +96,7 @@ export const projects: Project[] = [
       demo: 'https://pazu.dev',
       github: 'https://github.com/PazuCheung10/nextfolio',
     },
+    image: '/projects/nextfolio.png',
     featured: false,
   },
   {
@@ -105,6 +111,7 @@ export const projects: Project[] = [
       demo: 'https://orbitlab-seven.vercel.app/',
       github: 'https://github.com/PazuCheung10/orbitlab',
     },
+    image: '/projects/orbitlab.png',
     featured: false,
   },
 ]

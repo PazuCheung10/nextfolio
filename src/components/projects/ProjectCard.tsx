@@ -2,6 +2,7 @@
 
 import { motion } from 'framer-motion'
 import { useRouter } from 'next/navigation'
+import Image from 'next/image'
 import { cn } from '@/lib/utils'
 import { Project } from '@/data/projects'
 
@@ -35,7 +36,17 @@ function ProjectCard({ project, index = 0, className }: ProjectCardProps) {
         className
       )}
     >
-      <div className="aspect-[16/9] w-full bg-white/[0.05]" />
+      <div className="aspect-[16/9] w-full bg-white/[0.05] relative overflow-hidden">
+        {project.image ? (
+          <Image
+            src={project.image}
+            alt={project.title}
+            fill
+            className="object-cover"
+            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+          />
+        ) : null}
+      </div>
       <div className="p-5 md:p-6 flex flex-col flex-1">
         <div className="flex items-center gap-2 mb-1">
           <h3 className="text-lg font-semibold text-white">{project.title}</h3>
