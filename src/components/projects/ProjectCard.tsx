@@ -1,6 +1,7 @@
 'use client'
 
 import { motion } from 'framer-motion'
+import Link from 'next/link'
 import { cn } from '@/lib/utils'
 import { Project } from '@/data/projects'
 
@@ -35,19 +36,29 @@ function ProjectCard({ project, index = 0, className }: ProjectCardProps) {
             </span>
           ))}
         </div>
-        <div className="mt-auto pt-5 flex items-center justify-between">
-          <a 
-            className="text-cyan-300 hover:text-cyan-200 font-medium transition-colors" 
-            href={project.links.demo}
-          >
-            Live Demo
-          </a>
-          <a 
-            className="text-slate-300 hover:text-white font-medium transition-colors" 
-            href={project.links.github}
-          >
-            GitHub
-          </a>
+        <div className="mt-auto pt-5 space-y-3">
+          <div className="flex items-center justify-between">
+            <a 
+              className="text-cyan-300 hover:text-cyan-200 font-medium transition-colors" 
+              href={project.links.demo}
+            >
+              Live Demo
+            </a>
+            <a 
+              className="text-slate-300 hover:text-white font-medium transition-colors" 
+              href={project.links.github}
+            >
+              GitHub
+            </a>
+          </div>
+          {project.slug === 'accessly' && (
+            <Link 
+              href="/projects/accessly"
+              className="block text-center text-sm text-slate-400 hover:text-cyan-300 font-medium transition-colors"
+            >
+              View Case Study →
+            </Link>
+          )}
         </div>
       </div>
     </motion.article>
