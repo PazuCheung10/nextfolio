@@ -1,7 +1,7 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import Link from 'next/link'
+import { useRouter } from 'next/navigation'
 import { cn } from '@/lib/utils'
 import { Project } from '@/data/projects'
 
@@ -12,14 +12,24 @@ interface ProjectCardProps {
 }
 
 function ProjectCard({ project, index = 0, className }: ProjectCardProps) {
+  const router = useRouter()
+
+  const handleCardClick = () => {
+    if (project.slug === 'accessly') {
+      router.push('/projects/accessly')
+    }
+  }
+
   return (
     <motion.article
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5, delay: index * 0.1 }}
       whileHover={{ y: -5 }}
+      onClick={project.slug === 'accessly' ? handleCardClick : undefined}
       className={cn(
         "flex h-full flex-col rounded-2xl bg-white/5 shadow-sm ring-1 ring-white/10 hover:shadow-md hover:shadow-black/20 hover:ring-white/20 transition-shadow overflow-hidden",
+        project.slug === 'accessly' && "cursor-pointer",
         className
       )}
     >
@@ -41,23 +51,26 @@ function ProjectCard({ project, index = 0, className }: ProjectCardProps) {
             <a 
               className="text-cyan-300 hover:text-cyan-200 font-medium transition-colors" 
               href={project.links.demo}
+              target="_blank"
+              rel="noopener noreferrer"
+              onClick={(e) => e.stopPropagation()}
             >
               Live Demo
             </a>
             <a 
               className="text-slate-300 hover:text-white font-medium transition-colors" 
               href={project.links.github}
+              target="_blank"
+              rel="noopener noreferrer"
+              onClick={(e) => e.stopPropagation()}
             >
               GitHub
             </a>
           </div>
           {project.slug === 'accessly' && (
-            <Link 
-              href="/projects/accessly"
-              className="block text-center text-sm text-slate-400 hover:text-cyan-300 font-medium transition-colors"
-            >
+            <div className="block text-center text-sm text-slate-400 hover:text-cyan-300 font-medium transition-colors">
               View Case Study →
-            </Link>
+            </div>
           )}
         </div>
       </div>
