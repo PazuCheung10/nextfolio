@@ -55,7 +55,7 @@ function Hero() {
           <div className="text-center max-w-5xl mx-auto">
             <h1 className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold mb-8 leading-tight">
               I help teams replace messy workflows with{' '}
-              <span className="text-cyan-400 bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent">custom</span> internal tools for teams{' '}
+              <span className="gradient">custom</span> internal tools{' '}
               <span className="text-cyan-400 bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent">— secure</span>,{' '}
               <span className="text-cyan-400 bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent">real-time</span> and ready to use.
             </h1>
@@ -119,7 +119,7 @@ function Hero() {
             style={{ willChange: 'transform, opacity' }}
           >
             I help teams replace messy workflows with{' '}
-            <span className="text-cyan-400 bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent">custom</span> internal tools for teams{' '}
+            <span className="gradient">custom</span> internal tools{' '}
             <span className="text-cyan-400 bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent">— secure</span>,{' '}
             <span className="text-cyan-400 bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent">real-time</span> and ready to use.
           </motion.h1>

@@ -104,6 +104,16 @@ button { font-family: inherit; }
   backdrop-filter: none !important;
 }
 
+/* Gradient text utility */
+.gradient {
+  color: #22d3ee; /* cyan-400 */
+  background: linear-gradient(to right, #22d3ee, #60a5fa); /* from-cyan-400 to-blue-400 */
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-fill-color: transparent;
+}
+
 /* IMPORTANT: do NOT globally override:
    main, section, .grid, .container, .mx-auto, .text-center, [class*="container"]
    Tailwind utilities should control spacing/centering. */
