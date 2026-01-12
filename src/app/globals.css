@@ -99,7 +99,7 @@ button { font-family: inherit; }
   background-color: rgba(2, 6, 23, 0.95) !important; /* slate-950-ish */
 }
 
-.is-safari header .md\\:hidden {
+.is-safari header [class*="md:hidden"] {
   -webkit-backdrop-filter: none !important;
   backdrop-filter: none !important;
 }

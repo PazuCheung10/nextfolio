@@ -46,7 +46,7 @@ export default function AccesslyCaseStudy() {
               <span className="text-slate-100 font-medium">
                 Fragmented internal tools slow teams down.
               </span>{' '}
-              Separate chat applications, issue trackers, and admin dashboards don't communicate with each other. Accessly replaces this complexity with one unified system that handles authentication, role-based permissions, real-time collaboration, and administrative oversight all in one place.
+              Separate chat applications, issue trackers, and admin dashboards don&apos;t communicate with each other. Accessly replaces this complexity with one unified system that handles authentication, role-based permissions, real-time collaboration, and administrative oversight all in one place.
             </p>
           </div>
         </Container>
