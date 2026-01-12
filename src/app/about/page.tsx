@@ -24,8 +24,7 @@ export default function AboutPage() {
         {/* Contact Section */}
         <motion.div 
           initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-100px" }}
+          animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.1 }}
           whileHover={{ y: -5 }}
           className="max-w-2xl mx-auto rounded-2xl bg-white/5 backdrop-blur p-8 md:p-10 hover:shadow-lg hover:shadow-black/30 hover:bg-white/10 group"
