@@ -63,7 +63,7 @@ export const projects: Project[] = [
     slug: 'weatherflow',
     summary: 'Map-based weather search with dynamic visuals.',
     description: 'An immersive weather application combining location-based forecasts with interactive maps. Features city search, geolocation, animated weather icons, and beautiful visual transitions.',
-    tags: ['Next.js', 'TypeScript', 'TanStack Query', 'Open‑Meteo', 'Leaflet', 'Chart.js', 'Framer Motion', 'React Hook Form', 'Tailwind CSS'],
+    tags: ['Next.js', 'TypeScript', 'TanStack Query', 'Open‑Meteo', 'Leaflet', 'Recharts', 'Framer Motion', 'React Hook Form', 'Tailwind CSS'],
     links: {
       demo: 'https://weatherflow-teal.vercel.app',
       github: 'https://github.com/PazuCheung10/weatherflow',
